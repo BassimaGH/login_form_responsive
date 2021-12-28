@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BaaServices login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- page grid -->
+    <div class="page_grid">
+        <!-- nav bar -->
+        <div class="nav_bar">
+            <!-- logo -->
+            <div class="logo">
+                <h1 class="black">Baa</h1>
+                <h1 class="green">Services</h1>
+            </div>
+            <!-- moon icon -->
+            <div class="moon_icon">
+                <svg id="moon_svg" viewBox="0 0 54 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.5357 5.84312C20.5329 10.1246 20.3965 14.5633 21.1346 18.8982C21.8726 23.2331 23.4702 27.3766 25.8333 31.085C28.1965 34.7933 31.2774 37.9916 34.8948 40.4916C38.5123 42.9917 42.5932 44.743 46.8975 45.6425C44.6346 47.984 41.9243 49.8469 38.9275 51.1208C35.9307 52.3947 32.7085 53.0535 29.4522 53.0581C29.1504 53.0581 28.8441 53.0691 28.5379 53.0581C22.8687 52.8584 17.4486 50.679 13.2192 46.8985C8.98986 43.1181 6.21848 37.9754 5.38655 32.3641C4.55462 26.7527 5.71472 21.0272 8.6653 16.1823C11.6159 11.3373 16.1705 7.6791 21.5379 5.84312H21.5357ZM24.7688 0.5625C24.6404 0.562933 24.5123 0.574645 24.386 0.5975C17.4223 1.83677 11.1633 5.60838 6.814 11.1862C2.46469 16.7639 0.332592 23.7535 0.828209 30.8092C1.32382 37.8649 4.41211 44.4878 9.49848 49.4028C14.5848 54.3178 21.3097 57.1773 28.3782 57.4309C28.7369 57.4441 29.0957 57.4309 29.45 57.4309C34.0415 57.4339 38.5661 56.3313 42.6413 54.2162C46.7166 52.1011 50.2226 49.0357 52.8629 45.2794C53.0768 44.9556 53.2016 44.5812 53.2249 44.1939C53.2481 43.8066 53.169 43.4199 52.9954 43.0729C52.8217 42.7259 52.5598 42.4307 52.2358 42.217C51.9119 42.0034 51.5374 41.8789 51.15 41.8559C46.78 41.4724 42.5566 40.0892 38.8064 37.8131C35.0562 35.537 31.8796 32.4291 29.522 28.7296C27.1645 25.0301 25.6892 20.838 25.2102 16.4774C24.7311 12.1167 25.2612 7.70435 26.7594 3.58125C26.8869 3.25122 26.9336 2.89552 26.8958 2.54377C26.8579 2.19202 26.7365 1.8544 26.5418 1.55906C26.347 1.26371 26.0845 1.01917 25.7761 0.845828C25.4677 0.672482 25.1223 0.575342 24.7688 0.5625Z"/>
+                </svg>
+            </div>
+        </div>
+        <!-- content -->
+        <div class="content">
+            <!-- all forms -->
+            <div class="container" id="container">
+                <!-- sign up form -->
+                <div class="form_container sign_up_form">
+                    <form action="#">
+                        <h2>SIGN UP</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <div class="terms_and_conditions">
+                            <input type="checkbox">
+                            <a href="#" class="terms_text">Agree on terms and conditions</a>
+                        </div>
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <!-- login form -->
+                <div class="form_container login_form">
+                    <form action="#">
+                        <h2>LOGIN</h2>
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <a href="#">Forgot password/username?</a>
+                        <button>Login</button>
+                    </form>
+                </div>
+                <!-- overlay container -->
+                <div class="overlay_container">
+                    <div class="overlay">
+                        <div class="overlay_panel overlay_left">
+                            <h2>LOGIN</h2>
+                            <p>Continue your journy with Baa services here!</p>
+                            <button class="ghost" id="logIn">Login</button>
+                        </div>
+                        <div class="overlay_panel overlay_right"> 
+                            <h2>SIGN UP</h2>
+                            <p>Start your journy with Baa services here!</p>
+                            <button class="ghost" id="signUp">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>  
+</body>
+</html>
