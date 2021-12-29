@@ -98,7 +98,10 @@ h1 {
 h2 {
     font-weight: bolder;
     font-size: 2vw;
-    margin: 0;
+}
+
+.main_header_forms {
+    margin-bottom: 40px;
 }
 
 p {
@@ -129,6 +132,7 @@ form {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+    row-gap: 0.5vw;
 	padding: 0 50px;
 	height: 100%;
 	text-align: center;
@@ -157,6 +161,7 @@ input {
 
 input[type="checkbox"] {
     width: auto;
+    cursor: pointer;
 }
 
 /* buttons */
@@ -168,11 +173,11 @@ button {
 	border: 1px solid #7DF452;
 	background-color: #7DF452;
 	color: #FFFFFF;
-	font-size: 12px;
+	font-size: 1.2vw;
 	font-weight: bold;
-	padding: 0.5vw 2vw;
 	letter-spacing: 1px;
 	transition: transform 80ms ease-in;
+    cursor: pointer;
 }
 
 button:active {
@@ -182,6 +187,11 @@ button:active {
 button.ghost {
     background-color: transparent;
     border: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.form_btn {
+    margin-top: 1vw;
 }
 
 .form_container {
@@ -220,7 +230,8 @@ button.ghost {
 .overlay {
     background-color: #7DF452;
     color: #ffffff;
-    height: 100vh;
+    background-size: cover;
+    height: 100%;
     background-position: 0 0;
     position: relative;
 	left: -100%;
@@ -238,17 +249,63 @@ button.ghost {
     text-align: center;
 	top: 0;
     padding: 0 40px;
-	height: 70%;
+	height: 100%;
 	width: 50%;
 	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
 
-.overlay_right {
+.overlay_left {
     transform: translateX(-20%);
 }
 
-.overlay_left {
-	right: 0;
+.overlay_right {
+    right: 0;
 	transform: translateX(0);
+}
+
+
+/* animation */
+
+/* move the sign up form to the right */
+.container.right-panel-active .sign_up_form {
+	transform: translateX(100%);
+}
+
+/* move the right overlay to the left */
+
+.container.right-panel-active .overlay_container {
+    transform: translateX(-100%);
+}
+
+/* bring the login form up */
+
+.container.right-panel-active .login_form {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 6;
+    animation: visibility 0.5s;
+}
+@keyframes visibility {
+    0%, 55% {
+        opacity: 0;
+        z-index: 1;
+    }
+    56%, 100% {
+        opacity: 1;
+        z-index: 6;
+    }
+}
+/* bring the sign up message overlay up */
+
+.container.right-panel-active .overlay {
+    transform: translateX(50%);
+}
+
+.container.right-panel-active .overlay_left {
+    transform: translateX(0);
+}
+
+.container.right-panel-active .overlay_right {
+    transform: translateX(20%);
 }
